@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homeador</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+      integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"crossorigin="anonymous"/>
+      <style media="screen">
+        @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    .user-card {
+      width: 300px;
+      height: 400px;
+      box-shadow: -10px 5px 20px rgba(0, 0, 0, 0.3);
+      border-radius: 15px;
+      overflow: hidden;
+      background: white;
+      display:flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      transition: box-shadow 0.2s ease-in;
+      cursor: pointer;
+    }
+    
+    .user-card:hover {
+      box-shadow: -10px 10px 20px rgba(0, 0, 0, 0.4);
+    }
+    
+    .user-card .user-cover {
+      height: 150px;
+      width: 100%;
+      position: relative;
+      background-image: url(https://images.pexels.com/photos/5969/wood-nature-forest-bridge.jpg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb);
+      background-position: center;
+      background-size: cover;
+    }
+    
+    .user-card .user-cover .user-avatar {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      left: 0;
+      right: 0;
+      margin: auto;
+      bottom: -35px;
+      border: 2px solid #fff;
+    }
+    
+    .user-card .user-details {
+      text-align: center;
+      margin-top: 35px;
+      margin-bottom: 25px;
+      width: 80%;
+    }
+    
+    .user-card .user-details .user-name {
+      margin-bottom: 10px;
+      font-size: 24px;
+      font-weight: 600;
+    }
+    
+    .user-card .user-details .user-email {
+      font-size: 14px;
+      color: #0f5fc0;
+      font-weight: 500;
+    }
+    .user-card .user-details .user-text{
+      margin-top: 5px;
+      font-size: 15px;
+      color: #666;
+    }
+    .user-card .contact-user {
+      margin-bottom: 15px;
+      height: 35px;
+      width: 80%;
+      border: 0;
+      color: white;
+      font-weight: bold;
+      background: #035f7d;
+      letter-spacing: 0.5px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    
+    /* Skeleton */
+    
+    /* Static Skeleton */
+    
+    .user-card.skeleton .user-cover {
+      background: #e2e2e2;
+    }
+    
+    .user-card.skeleton .user-cover .user-avatar {
+      display: none;
+    }
+    
+    .user-card.skeleton .user-cover::after {
+      content: "";
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      left: 0;
+      right: 0;
+      margin: auto;
+      bottom: -35px;
+      border: 2px solid #fff;
+      z-index: 10;
+      background: #e2e2e2;
+    }
+    
+      </style>
+  </head>
+  <body>
+    <!-- Navbar Section -->
+    <nav class="navbar">
+      <div class="navbar__container">
+        <a href="#home" id="navbar__logo">logo</a>
+        <div class="navbar__toggle" id="mobile-menu">
+          <span class="bar"></span> <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="navbar__menu">
+          <li class="navbar__item">
+            <a href="index.html" class="navbar__links" id="home-page">Home</a>
+          </li>
+          <li class="navbar__item">
+            <a href="#about" class="navbar__links" id="about-page">About</a>
+          </li>
+          <li class="navbar__item">
+            <a href="service.html" class="navbar__links" id="services-page"
+              >Services</a
+            >
+          </li>
+          <li class="navbar__btn">
+            <a href="#sign-up" class="button" id="signup">Sign Up</a>
+          </li>
+        </ul>
+      </div>
+    
+    </nav>
+    
+    <!-------------service section---------------->
+
+    <section class="services" id="services" style=" background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+  skyblue 100%
+  ); padding: 50px;">
+        <div class="user-card skeleton">
+          <div class="user-cover">
+      
+            <img class="user-avatar" src="
+              https://1.bp.blogspot.com/-vhmWFWO2r8U/YLjr2A57toI/AAAAAAAACO4/0GBonlEZPmAiQW4uvkCTm5LvlJVd_-l_wCNcBGAsYHQ/s16000/team-1-2.jpg" alt="user profile image" />
+          </div>
+          <div class="user-details">
+            <div class="user-name hide-text">Anamika Roy</div>
+            <div class="user-email hide-text">address:552 /9b saket nagar bhopal</div>
+            <div class="user-text hide-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur. </div>
+           <br><br> <h3>work Rating</h3>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <style>
+              .checked {
+              color: orange;
+            }
+            </style>
+          </div>
+          <button class="contact-user hide-text">CONTACT</button>
+        </div><br>
+        <div class="user-card skeleton">
+          <div class="user-cover">
+      
+            <img class="user-avatar" src="
+              https://1.bp.blogspot.com/-vhmWFWO2r8U/YLjr2A57toI/AAAAAAAACO4/0GBonlEZPmAiQW4uvkCTm5LvlJVd_-l_wCNcBGAsYHQ/s16000/team-1-2.jpg" alt="user profile image" />
+          </div>
+          <div class="user-details">
+            <div class="user-name hide-text">Anamika Roy</div>
+            <div class="user-email hide-text">address:552 /9b saket nagar bhopal</div>
+            <div class="user-text hide-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur. </div>
+           <br><br> <h3>work Rating</h3>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <style>
+              .checked {
+              color: orange;
+            }
+            </style>
+          </div>
+          <button class="contact-user hide-text">CONTACT</button>
+        </div><br>
+
+        <div class="user-card skeleton">
+          <div class="user-cover">
+      
+            <img class="user-avatar" src="
+              https://1.bp.blogspot.com/-vhmWFWO2r8U/YLjr2A57toI/AAAAAAAACO4/0GBonlEZPmAiQW4uvkCTm5LvlJVd_-l_wCNcBGAsYHQ/s16000/team-1-2.jpg" alt="user profile image" />
+          </div>
+          <div class="user-details">
+            <div class="user-name hide-text">Anamika Roy</div>
+            <div class="user-email hide-text">address:552 /9b saket nagar bhopal</div>
+            <div class="user-text hide-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur. </div>
+           <br><br> <h3>work Rating</h3>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <style>
+              .checked {
+              color: orange;
+            }
+            </style>
+          </div>
+          <button class="contact-user hide-text">CONTACT</button>
+        </div><br>
+
+        <div class="user-card skeleton">
+          <div class="user-cover">
+      
+            <img class="user-avatar" src="
+              https://1.bp.blogspot.com/-vhmWFWO2r8U/YLjr2A57toI/AAAAAAAACO4/0GBonlEZPmAiQW4uvkCTm5LvlJVd_-l_wCNcBGAsYHQ/s16000/team-1-2.jpg" alt="user profile image" />
+          </div>
+          <div class="user-details">
+            <div class="user-name hide-text">Anamika Roy</div>
+            <div class="user-email hide-text">address:552 /9b saket nagar bhopal</div>
+            <div class="user-text hide-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur. </div>
+           <br><br> <h3>work Rating</h3>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <style>
+              .checked {
+              color: orange;
+            }
+            </style>
+          </div>
+          <button class="contact-user hide-text">CONTACT</button>
+        </div><br>
+
+        <div class="user-card skeleton">
+          <div class="user-cover">
+      
+            <img class="user-avatar" src="
+              https://1.bp.blogspot.com/-vhmWFWO2r8U/YLjr2A57toI/AAAAAAAACO4/0GBonlEZPmAiQW4uvkCTm5LvlJVd_-l_wCNcBGAsYHQ/s16000/team-1-2.jpg" alt="user profile image" />
+          </div>
+          <div class="user-details">
+            <div class="user-name hide-text">Anamika Roy</div>
+            <div class="user-email hide-text">address:552 /9b saket nagar bhopal</div>
+            <div class="user-text hide-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur. </div>
+           <br><br> <h3>work Rating</h3>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <style>
+              .checked {
+              color: orange;
+            }
+            </style>
+          </div>
+          <button class="contact-user hide-text">CONTACT</button>
+        </div><br>
+
+
+        
+      </section>
+      
+        
+        <script type="text/javascript">
+      const $el = document.querySelector(".user-card");
+      
+      // Loading finished
+      setTimeout(() => {
+        $el.classList.remove("skeleton");
+        $el
+          .querySelectorAll(".hide-text")
+          .forEach((el) => el.classList.remove("hide-text"));
+      }, 3000);
+        </script>
+      
+    
+   <script src="app.js"></script>
+  </body>
+</html>
